@@ -28,25 +28,25 @@ const server = http.createServer((req, res)=>{
         res.end()
     }
 
-    else if(req.url === "/api/users1"){
+    else if(req.url === "/api/user1"){
         res.statusCode = 200
         res.setHeader("Content-Type", "application/json")
         res.write(JSON.stringify(staticApiData1))
         res.end()
     }
-     else if(req.url === "/api/users2"){
+     else if(req.url === "/api/user2"){
         res.statusCode = 200
         res.setHeader("Content-Type", "application/json")
         res.write(JSON.stringify(staticApiData2))
         res.end()
     }
-     else if(req.url === "/api/users3"){
+     else if(req.url === "/api/user3"){
         res.statusCode = 200
         res.setHeader("Content-Type", "application/json")
         res.write(JSON.stringify(staticApiData3))
         res.end()
     }
-    else if(req.url === "/api/allusers"){
+    else if(req.url === "/api/users"){
 
         const allData = {
         group1: staticApiData1,
