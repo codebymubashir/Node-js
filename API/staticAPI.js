@@ -46,6 +46,18 @@ const server = http.createServer((req, res)=>{
         res.write(JSON.stringify(staticApiData3))
         res.end()
     }
+    else if(req.url === "/api/allusers"){
+
+        const allData = {
+        group1: staticApiData1,
+        group2: staticApiData2,
+        group3: staticApiData3
+    }
+        res.statusCode = 200
+        res.setHeader("Content-Type", "application/json")
+        res.write(JSON.stringify(allData))
+        res.end()
+    }
 
     else{
         res.statusCode = 404
