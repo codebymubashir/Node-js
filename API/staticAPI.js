@@ -20,7 +20,7 @@ const staticApiData3 = [
     {id: 9, name: "abdullah", Role: "Admin", level:"fresher"},
     {id: 10, name: "mubashir", Role: "Tester", level:"medium"},
 ]
-
+   
 
 const server = http.createServer((req, res)=>{
     if(req.url === "/"){
