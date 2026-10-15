@@ -1,41 +1,52 @@
-const http = require("http");
+const http = require("http")
 const fs = require("fs")
 
-let server = http.createServer((req,res)=>{
+const server = http.createServer((req, res) => {
+    // let header = fs.readFileSync("Project/Project/files/header.html", "utf-8")
+    // let nav = fs.readFileSync("Project/Project/files/nav.html", "utf-8")
+    // let footer = fs.readFileSync("Project/Project/files/footer.html", "utf-8")
 
-    let fullData = fs.readFileSync("html/web.html","utf8")
-    if(req.url === "/web.css"){
-        fs.readFile("html/web.css","utf8",(err,data)=>{
+    let file = "/index"
+    if (req.url !== "/") {
+        file = req.url
+    }
+    if (file !== "/style.css") {
+        if (file.endsWith(".html")) {
+            file = file.replace(".html", "")   // "/contact.html" -> "/contact"
+        }
+        fs.readFile("html" + file + ".html", "utf-8", (err, data) => {
             if (err) {
-                res.writeHead(500,{"Content-Type":"text/plain"});
-                res.end("css not found");
-                return;
-            } else {
-                res.writeHead(200,{"Content-Type":"text/css"});
-                res.end(data);
-                
+                res.statusCode = 500
+                res.setHeader("content-type", "text/plain")
+                res.write("Internal server error")
+                res.end()
+                return
             }
-        })
-        
-    }else{
-        let file = req.url === "/" ? "/web": req.url;
-        fs.readFile("html"+file+".html","utf8",(err,data)=>{
-            if (err) {
-                res.writeHead(400,{"Content-Type":"text/plain"});
-                res.end("page not found");
-                return;
-                
-            } else {
-                res.writeHead(200,{"Content-Type":"text/html"});
-                res.end(data)
-                
-            }
-
+            res.statusCode = 200
+            res.setHeader("content-type", "text/html")
+            res.write(data)
+            res.end()
         })
     }
+    else {
+        fs.readFile("html/style.css", "utf-8", (err, data) => {
+            if (err) {
+                res.statusCode = 500
+                res.setHeader("content-type", "text/plain")
+                res.write("Internal server error")
+                res.end()
+                return
+            }
 
+            res.statusCode = 200
+            res.setHeader("content-type", "text/css")
+            res.write(data)
+            res.end()
+        })
+    }
 })
 
-let PORT = 4800;
-server.listen(PORT)
-
+const PORT = 3000
+server.listen(PORT, () => {
+    console.log("Server listneing at port:", PORT)
+})

@@ -1,0 +1,374 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;  
+}
+
+:root {
+  --green: #14342b;         
+  --mint: #f1f6f2;         
+  --saffron: #f2b632;       
+  --ink: #1c211f;            
+}
+
+html {
+  scroll-behavior: smooth;   
+}
+
+body {
+  font-family: Georgia, "Times New Roman", serif;
+  background: var(--mint);
+  color: var(--ink);
+  line-height: 1.7;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between; 
+  align-items: center;
+  padding: 20px 8%;
+  background: var(--green);
+  color: var(--mint);
+  position: sticky;                
+  top: 0;
+}
+
+.logo {
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+
+.nav a {
+  margin-left: 24px;
+}
+
+.nav a:hover {
+  color: var(--saffron);
+}
+.hero {
+  background: var(--green);
+  color: var(--mint);
+  padding: 110px 8% 130px;
+}
+
+.hero h1 {
+  font-size: clamp(2.2rem, 6vw, 4rem); 
+  line-height: 1.15;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  max-width: 480px;
+  margin-bottom: 32px;
+  font-size: 1.1rem;
+}
+
+.btn {
+  display: inline-block;
+  background: var(--saffron);
+  color: var(--green);
+  padding: 14px 28px;
+  border-radius: 6px;
+  font-weight: bold;
+}
+
+.btn:hover {
+  background: #ffd067;
+}
+
+.section {
+  padding: 80px 8%;
+}
+
+.section h2 {
+  font-size: 2rem;
+  margin-bottom: 30px;
+}
+
+.menu {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 24px;
+}
+
+.item {
+  border-left: 4px solid var(--saffron);
+  padding: 8px 0 8px 18px;
+}
+
+.item h3 {
+  font-size: 1.25rem;
+}
+
+.price {
+  font-weight: bold;
+  color: var(--green);
+}
+
+.about p {
+  max-width: 620px;
+}
+
+.footer {
+  background: var(--green);
+  color: var(--mint);
+  padding: 60px 8%;
+}
+
+.footer h2 {
+  margin-bottom: 12px;
+}
+
+.copy {
+  margin-top: 28px;
+  font-size: 0.85rem;
+  opacity: 0.7;
+}
+
+/* ---------- Reset + base ---------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;   /* padding won't make boxes bigger */
+}
+
+:root {
+  --green: #14342b;          /* dark green */
+  --mint: #f1f6f2;           /* light background */
+  --saffron: #f2b632;        /* accent color */
+  --ink: #1c211f;            /* text color */
+}
+
+html {
+  scroll-behavior: smooth;   /* smooth scroll on nav click */
+}
+
+body {
+  font-family: Georgia, "Times New Roman", serif;
+  background: var(--mint);
+  color: var(--ink);
+  line-height: 1.7;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* ---------- Header ---------- */
+.header {
+  display: flex;
+  justify-content: space-between;  /* logo left, nav right */
+  align-items: center;
+  padding: 20px 8%;
+  background: var(--green);
+  color: var(--mint);
+  position: sticky;                /* stays at top while scrolling */
+  top: 0;
+}
+
+.logo {
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+
+.nav a {
+  margin-left: 24px;
+}
+
+.nav a:hover {
+  color: var(--saffron);
+}
+
+/* ---------- Hero ---------- */
+.hero {
+  background: var(--green);
+  color: var(--mint);
+  padding: 110px 8% 130px;
+}
+
+.hero h1 {
+  font-size: clamp(2.2rem, 6vw, 4rem);  /* scales with screen size */
+  line-height: 1.15;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  max-width: 480px;
+  margin-bottom: 32px;
+  font-size: 1.1rem;
+}
+
+.btn {
+  display: inline-block;
+  background: var(--saffron);
+  color: var(--green);
+  padding: 14px 28px;
+  border-radius: 6px;
+  font-weight: bold;
+}
+
+.btn:hover {
+  background: #ffd067;
+}
+
+/* ---------- Sections ---------- */
+.section {
+  padding: 80px 8%;
+}
+
+.section h2 {
+  font-size: 2rem;
+  margin-bottom: 30px;
+}
+
+.menu {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); /* auto responsive */
+  gap: 24px;
+}
+
+.item {
+  border-left: 4px solid var(--saffron);
+  padding: 8px 0 8px 18px;
+}
+
+.item h3 {
+  font-size: 1.25rem;
+}
+
+.price {
+  font-weight: bold;
+  color: var(--green);
+}
+
+.about p {
+  max-width: 620px;
+}
+
+/* ---------- Footer ---------- */
+.footer {
+  background: var(--green);
+  color: var(--mint);
+  padding: 60px 8%;
+}
+
+.footer h2 {
+  margin-bottom: 12px;
+}
+
+.copy {
+  margin-top: 28px;
+  font-size: 0.85rem;
+  opacity: 0.7;
+}
+
+/* ---------- Mobile ---------- */
+@media (max-width: 600px) {
+  .header {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .nav a {
+    margin: 0 10px;
+  }
+}
+
+/* ================= Extra styles for inner pages ================= */
+
+/* Active page link in the nav */
+.nav a.active {
+  color: var(--saffron);
+}
+
+/* Smaller banner at the top of About / Contact / Login */
+.page-hero {
+  background: var(--green);
+  color: var(--mint);
+  padding: 70px 8% 80px;
+}
+
+.page-hero h1 {
+  font-size: clamp(2rem, 5vw, 3rem);
+  margin-bottom: 10px;
+}
+
+/* Slightly different background to separate sections */
+.alt {
+  background: #e3ede6;
+}
+
+.about p {
+  margin-bottom: 16px;
+}
+
+/* ---------- Forms (Contact + Login) ---------- */
+.form {
+  display: flex;
+  flex-direction: column;     /* stack fields vertically */
+  max-width: 520px;
+}
+
+.form label {
+  font-weight: bold;
+  margin: 14px 0 6px;
+}
+
+.form input,
+.form textarea {
+  padding: 12px 14px;
+  border: 1px solid #9db5a8;
+  border-radius: 6px;
+  font-family: inherit;
+  font-size: 1rem;
+  background: #fff;
+}
+
+.form input:focus,
+.form textarea:focus {
+  outline: 3px solid var(--saffron);   /* visible focus ring */
+  border-color: var(--green);
+}
+
+.form .btn {
+  margin-top: 24px;
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 1rem;
+}
+
+/* Login card centered on the page */
+.center {
+  display: flex;
+  justify-content: center;
+}
+
+.login-box {
+  width: 100%;
+  background: #fff;
+  padding: 32px;
+  border-radius: 8px;
+  border-top: 4px solid var(--saffron);
+}
+
+.note {
+  margin-top: 18px;
+  font-size: 0.95rem;
+}
+
+.note a {
+  color: var(--green);
+  text-decoration: underline;
+}
+
+/* Footer on inner pages is a single line */
+.footer p {
+  margin-bottom: 4px;
+}
