@@ -1,0 +1,14 @@
+const express = require("express")
+const app = express();
+
+app.get("/",(req,resp)=>{
+    resp.send("this is express js")
+
+})
+
+app.get("/about",(req,resp)=>{
+    resp.send("this is about page")
+})
+
+
+app.listen(4400);
