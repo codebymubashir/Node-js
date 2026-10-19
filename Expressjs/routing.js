@@ -1,14 +1,12 @@
 const express = require("express")
 const app = express();
+const path = require("path")
 
 app.get("/",(req,resp)=>{
-    resp.send("this is express js")
+    resp.sendFile(path.join(__dirname,"web.html"))
 
 })
 
-app.get("/about",(req,resp)=>{
-    resp.send("this is about page")
-})
 
 
 app.listen(4400);
