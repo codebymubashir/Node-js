@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contact us | Maison Zari</title>
+  <meta name="description" content="Contact Maison Zari for sizing help, orders, exchanges or a visit to our Bahawalpur showroom.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Syne:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <input type="checkbox" id="theme-toggle" class="hidden-input" aria-label="Switch to dark theme">
+
+  <div class="announce">Free delivery across Pakistan on orders above Rs. 15,000</div>
+
+  <!-- ============ HEADER ============ -->
+  <header class="site-header">
+    <div class="container nav">
+      <input type="checkbox" id="nav-toggle" class="hidden-input" aria-label="Open menu">
+
+      <a href="index.html" class="brand" aria-label="Maison Zari home">
+        <span class="brand-mark"></span>Maison Zari
+      </a>
+
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="index.html#collection">Collection</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html" class="active">Contact</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <label class="theme-switch" for="theme-toggle" title="Switch light or dark theme">
+          <i class="knob"></i><span>&#9728;</span><span>&#9790;</span>
+        </label>
+        <a href="index.html#collection" class="btn btn-accent btn-nav">Shop now</a>
+        <label class="burger" for="nav-toggle" aria-label="Menu"><i></i><i></i><i></i></label>
+      </div>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ============ PAGE HERO ============ -->
+    <section class="page-hero">
+      <div class="media img-contact-hero" aria-hidden="true"></div>
+      <div class="container">
+        <p class="crumbs"><a href="index.html">Home</a> / Contact</p>
+        <h1 class="rise">Let's talk about your next outfit.</h1>
+        <p class="rise" style="--d:.2s">Ask about sizing, fabrics or delivery. A real person replies within one working day.</p>
+      </div>
+    </section>
+
+    <!-- ============ CONTACT GRID ============ -->
+    <section class="section">
+      <div class="container contact-grid">
+
+        <div>
+          <h2>Reach us your way</h2>
+          <p style="color: var(--muted); margin-top: .8rem;">Visit the showroom, call, or send us a message. We are happy to help.</p>
+
+          <div class="info-list">
+            <div class="info-card">
+              <div class="info-icon" aria-hidden="true">&#128205;</div>
+              <div><small>Showroom</small><strong>Model Town, Bahawalpur</strong></div>
+            </div>
+            <a href="mailto:hello@maisonzari.pk" class="info-card">
+              <div class="info-icon" aria-hidden="true">&#9993;</div>
+              <div><small>Email</small><strong>hello@maisonzari.pk</strong></div>
+            </a>
+            <a href="tel:+920000000000" class="info-card">
+              <div class="info-icon" aria-hidden="true">&#9742;</div>
+              <div><small>Phone and WhatsApp</small><strong>+92 300 000 0000</strong></div>
+            </a>
+            <div class="info-card">
+              <div class="info-icon" aria-hidden="true">&#128337;</div>
+              <div><small>Opening hours</small><strong>Mon to Sat, 11am to 8pm</strong></div>
+            </div>
+          </div>
+
+          <div class="map-card">
+            <div class="media img-map" aria-hidden="true"></div>
+            <a href="https://www.google.com/maps/search/?api=1&amp;query=Model+Town+Bahawalpur" class="btn btn-accent" target="_blank" rel="noopener">Open in Google Maps</a>
+          </div>
+        </div>
+
+        <div class="form-card">
+          <h2>Send us a message</h2>
+          <p>Fill in the form and we will get back to you by email.</p>
+
+          <form action="#" method="post">
+            <div class="form-row">
+              <div class="field">
+                <label for="name">Full name</label>
+                <input type="text" id="name" name="name" placeholder="Ayesha Khan" autocomplete="name" required>
+              </div>
+              <div class="field">
+                <label for="phone">Phone number</label>
+                <input type="tel" id="phone" name="phone" placeholder="0300 0000000" autocomplete="tel">
+              </div>
+            </div>
+
+            <div class="field">
+              <label for="email">Email address</label>
+              <input type="email" id="email" name="email" placeholder="you@example.com" autocomplete="email" required>
+            </div>
+
+            <div class="field">
+              <label for="topic">What is this about?</label>
+              <select id="topic" name="topic">
+                <option>Sizing and made-to-measure</option>
+                <option>An order I placed</option>
+                <option>Exchange or repair</option>
+                <option>Wedding or bulk orders</option>
+                <option>Something else</option>
+              </select>
+            </div>
+
+            <div class="field">
+              <label for="message">Your message</label>
+              <textarea id="message" name="message" placeholder="Tell us what you are looking for." required></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-brand">Send message</button>
+          </form>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ============ FAQ ============ -->
+    <section class="section alt">
+      <div class="container">
+        <div class="section-head center">
+          <h2>Quick answers</h2>
+          <p>Tap a question to open the answer.</p>
+        </div>
+        <div class="faq">
+          <details open>
+            <summary>How long does delivery take?</summary>
+            <p>Ready-to-wear pieces arrive in 2 to 4 working days. Made-to-measure pieces take about 9 days, because each one is woven and stitched for you.</p>
+          </details>
+          <details>
+            <summary>Can I exchange or return an item?</summary>
+            <p>Yes. You can exchange any unworn piece within 14 days of delivery. Made-to-measure items can be altered for free, but they cannot be returned.</p>
+          </details>
+          <details>
+            <summary>How do I know my size?</summary>
+            <p>Send us your height, chest and waist measurements through the form above, and our tailors will recommend a size or arrange a made-to-measure fitting.</p>
+          </details>
+          <details>
+            <summary>Do you deliver outside Pakistan?</summary>
+            <p>Not yet. We currently deliver to 24 cities across Pakistan, and we plan to add international shipping soon.</p>
+          </details>
+          <details>
+            <summary>How should I wash zari clothing?</summary>
+            <p>Dry clean silk and velvet pieces. Cotton and linen can be hand washed in cold water, turned inside out, and dried in the shade.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <a href="index.html" class="brand"><span class="brand-mark"></span>Maison Zari</a>
+        <p>Handwoven zari clothing for women and men, made by skilled artisans in Pakistan.</p>
+      </div>
+      <div>
+        <h4>Shop</h4>
+        <ul>
+          <li><a href="index.html#collection">Women</a></li>
+          <li><a href="index.html#collection">Men</a></li>
+          <li><a href="index.html#collection">Festive</a></li>
+          <li><a href="index.html#collection">Accessories</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Company</h4>
+        <ul>
+          <li><a href="about.html">Our story</a></li>
+          <li><a href="about.html">Our artisans</a></li>
+          <li><a href="contact.html">Contact us</a></li>
+          <li><a href="contact.html">FAQs</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Visit us</h4>
+        <ul>
+          <li>Model Town, Bahawalpur</li>
+          <li>Mon to Sat, 11am to 8pm</li>
+          <li><a href="mailto:hello@maisonzari.pk">hello@maisonzari.pk</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <span>&copy; 2026 Maison Zari. All rights reserved.</span>
+      <span>Made with care in Pakistan</span>
+    </div>
+  </footer>
+
+</body>
+</html>

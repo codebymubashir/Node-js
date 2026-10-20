@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Maison Zari | Woven in gold thread</title>
+  <meta name="description" content="Maison Zari makes handwoven zari clothing for women and men. Shop dresses, kurtas, sherwanis and shawls made by skilled artisans.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Syne:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Dark / light switch (pure CSS) -->
+  <input type="checkbox" id="theme-toggle" class="hidden-input" aria-label="Switch to dark theme">
+
+  <div class="announce">Free delivery across Pakistan on orders above Rs. 15,000</div>
+
+  <!-- ============ HEADER ============ -->
+  <header class="site-header">
+    <div class="container nav">
+      <input type="checkbox" id="nav-toggle" class="hidden-input" aria-label="Open menu">
+
+      <a href="index.html" class="brand" aria-label="Maison Zari home">
+        <span class="brand-mark"></span>Maison Zari
+      </a>
+
+      <ul class="nav-links">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="#collection">Collection</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <label class="theme-switch" for="theme-toggle" title="Switch light or dark theme">
+          <i class="knob"></i><span>&#9728;</span><span>&#9790;</span>
+        </label>
+        <a href="#collection" class="btn btn-accent btn-nav">Shop now</a>
+        <label class="burger" for="nav-toggle" aria-label="Menu"><i></i><i></i><i></i></label>
+      </div>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ============ HERO ============ -->
+    <section class="hero" aria-label="Welcome">
+      <div class="hero-bg media img-hero"></div>
+      <video class="hero-video" autoplay muted loop playsinline preload="metadata" aria-hidden="true">
+        <source src="media/hero.mp4" type="video/mp4">
+      </video>
+
+      <div class="container hero-inner">
+        <div>
+          <span class="eyebrow rise" style="--d:.1s">Autumn&ndash;Winter 2026 collection</span>
+          <h1>
+            <span class="rise" style="--d:.25s">Wear the thread</span>
+            <span class="rise" style="--d:.4s">that tells your story.</span>
+          </h1>
+          <p class="rise" style="--d:.55s">Handwoven zari, cut for the way you actually live. Dresses, kurtas and sherwanis made by 180 artisans, one piece at a time.</p>
+          <div class="hero-actions rise" style="--d:.7s">
+            <a href="#collection" class="btn btn-accent">Shop the collection</a>
+            <a href="about.html" class="btn btn-light-ghost">Our story</a>
+          </div>
+        </div>
+
+        <div class="hero-arch media img-hero-arch rise" style="--d:.9s" role="img" aria-label="Model wearing the Zari Anarkali set">
+          <div class="hero-arch-tag"><strong>Zari Anarkali Set</strong>Rs. 32,500</div>
+        </div>
+      </div>
+      <div class="hero-scroll" aria-hidden="true"></div>
+    </section>
+
+    <!-- ============ MARQUEE ============ -->
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee-track">
+        <span>Handwoven zari</span><span>Made to measure</span><span>Free delivery above Rs. 15,000</span><span>Easy 14-day exchange</span><span>Stitched by master tailors</span>
+        <span>Handwoven zari</span><span>Made to measure</span><span>Free delivery above Rs. 15,000</span><span>Easy 14-day exchange</span><span>Stitched by master tailors</span>
+      </div>
+    </div>
+
+    <!-- ============ CATEGORIES ============ -->
+    <section class="section" id="categories">
+      <div class="container">
+        <div class="section-head">
+          <h2>Four ways to wear gold</h2>
+          <p>Start with who you are shopping for. Every piece is available in sizes XS to 3XL, or made to your measurements.</p>
+        </div>
+        <div class="cat-grid">
+          <a href="#collection" class="cat-card">
+            <div class="media img-cat-women" role="img" aria-label="Woman in a white dress"></div>
+            <h3>Women <small>42 pieces</small></h3>
+          </a>
+          <a href="#collection" class="cat-card">
+            <div class="media img-cat-men" role="img" aria-label="Man in a tailored outfit"></div>
+            <h3>Men <small>31 pieces</small></h3>
+          </a>
+          <a href="#collection" class="cat-card">
+            <div class="media img-cat-festive" role="img" aria-label="Festive outfit with embroidery"></div>
+            <h3>Festive <small>24 pieces</small></h3>
+          </a>
+          <a href="#collection" class="cat-card">
+            <div class="media img-cat-acc" role="img" aria-label="Shopping bags and accessories"></div>
+            <h3>Accessories <small>18 pieces</small></h3>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ COLLECTION (CSS-only filter) ============ -->
+    <section class="section alt" id="collection">
+      <div class="container">
+        <div class="section-head">
+          <h2>This season's collection</h2>
+          <p>Pick a category to filter. Hover over a piece to see the quick view button.</p>
+        </div>
+
+        <div class="collection">
+          <input type="radio" name="filter" id="f-all" class="hidden-input" checked aria-label="Show all">
+          <input type="radio" name="filter" id="f-women" class="hidden-input" aria-label="Show women">
+          <input type="radio" name="filter" id="f-men" class="hidden-input" aria-label="Show men">
+          <input type="radio" name="filter" id="f-festive" class="hidden-input" aria-label="Show festive">
+          <input type="radio" name="filter" id="f-acc" class="hidden-input" aria-label="Show accessories">
+
+          <div class="filters">
+            <label for="f-all">All</label>
+            <label for="f-women">Women</label>
+            <label for="f-men">Men</label>
+            <label for="f-festive">Festive</label>
+            <label for="f-acc">Accessories</label>
+          </div>
+
+          <div class="product-grid">
+            <article class="product women festive">
+              <div class="p-media">
+                <span class="p-tag new">New</span>
+                <div class="media img-p1" role="img" aria-label="Zari Anarkali Set"></div>
+                <a href="contact.html" class="p-quick">Ask about this piece</a>
+              </div>
+              <div class="p-info">
+                <div><h3>Zari Anarkali Set</h3><small>Silk, hand-embroidered</small></div>
+                <span class="price">Rs. 32,500</span>
+              </div>
+            </article>
+
+            <article class="product women">
+              <div class="p-media">
+                <div class="media img-p2" role="img" aria-label="Chikankari Kurta"></div>
+                <a href="contact.html" class="p-quick">Ask about this piece</a>
+              </div>
+              <div class="p-info">
+                <div><h3>Ivory Chikankari Kurta</h3><small>Cotton lawn</small></div>
+                <span class="price">Rs. 14,900</span>
+              </div>
+            </article>
+
+            <article class="product women">
+              <div class="p-media">
+                <span class="p-tag">Sale</span>
+                <div class="media img-p3" role="img" aria-label="Sage Organza Dress"></div>
+                <a href="contact.html" class="p-quick">Ask about this piece</a>
+              </div>
+              <div class="p-info">
+                <div><h3>Sage Organza Dress</h3><small>Organza, lined</small></div>
+                <span class="price"><s>Rs. 26,000</s>Rs. 21,000</span>
+              </div>
+            </article>
+
+            <article class="product acc festive">
+              <div class="p-media">
+                <div class="media img-p4" role="img" aria-label="Midnight Velvet Shawl"></div>
+                <a href="contact.html" class="p-quick">Ask about this piece</a>
+              </div>
+              <div class="p-info">
+                <div><h3>Midnight Velvet Shawl</h3><small>Velvet, zari border</small></div>
+                <span class="price">Rs. 9,800</span>
+              </div>
+            </article>
+
+            <article class="product men festive">
+              <div class="p-media">
+                <span class="p-tag new">New</span>
+                <div class="media img-p5" role="img" aria-label="Heritage Sherwani"></div>
+                <a href="contact.html" class="p-quick">Ask about this piece</a>
+              </div>
+              <div class="p-info">
+                <div><h3>Heritage Sherwani</h3><small>Jamawar, made to measure</small></div>
+                <span class="price">Rs. 48,000</span>
+              </div>
+            </article>
+
+            <article class="product men">
+              <div class="p-media">
+                <div class="media img-p6" role="img" aria-label="Linen Kurta Shalwar"></div>
+                <a href="contact.html" class="p-quick">Ask about this piece</a>
+              </div>
+              <div class="p-info">
+                <div><h3>Linen Kurta Shalwar</h3><small>Pure linen</small></div>
+                <span class="price">Rs. 12,500</span>
+              </div>
+            </article>
+
+            <article class="product acc women">
+              <div class="p-media">
+                <div class="media img-p7" role="img" aria-label="Handloom Dupatta"></div>
+                <a href="contact.html" class="p-quick">Ask about this piece</a>
+              </div>
+              <div class="p-info">
+                <div><h3>Handloom Dupatta</h3><small>Khaddar, gold edge</small></div>
+                <span class="price">Rs. 6,500</span>
+              </div>
+            </article>
+
+            <article class="product men">
+              <div class="p-media">
+                <span class="p-tag">Sale</span>
+                <div class="media img-p8" role="img" aria-label="Brass-button Waistcoat"></div>
+                <a href="contact.html" class="p-quick">Ask about this piece</a>
+              </div>
+              <div class="p-info">
+                <div><h3>Brass-button Waistcoat</h3><small>Wool blend</small></div>
+                <span class="price"><s>Rs. 19,500</s>Rs. 15,800</span>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CRAFT STORY ============ -->
+    <section class="section" id="craft">
+      <div class="container split">
+        <div class="split-media">
+          <div class="media img-story" role="img" aria-label="Clothes hanging in the Maison Zari atelier"></div>
+          <div class="media split-float img-about-1" role="img" aria-label="Folded handwoven fabric"></div>
+        </div>
+        <div class="split-text">
+          <span class="eyebrow">How we make it</span>
+          <h2>One garment takes nine days to weave and stitch.</h2>
+          <p>Our weavers pull real zari thread through each fabric by hand. Then master tailors cut it to your measurements, so the piece fits the first time you wear it.</p>
+          <ul class="ticks">
+            <li>Natural fabrics: silk, cotton, linen and wool</li>
+            <li>Free alterations within 14 days of delivery</li>
+            <li>Every artisan is paid above the local wage</li>
+          </ul>
+          <a href="about.html" class="btn btn-brand">Read our story</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ STATS ============ -->
+    <section class="stats" aria-label="Maison Zari in numbers">
+      <div class="container stats-grid">
+        <div class="stat"><strong>12,000+</strong><span>Happy customers</span></div>
+        <div class="stat"><strong>180</strong><span>Artisans on our team</span></div>
+        <div class="stat"><strong>24</strong><span>Cities we deliver to</span></div>
+        <div class="stat"><strong>4.9/5</strong><span>Average customer rating</span></div>
+      </div>
+    </section>
+
+    <!-- ============ TESTIMONIALS ============ -->
+    <section class="section">
+      <div class="container">
+        <div class="section-head">
+          <h2>What our customers say</h2>
+          <p>Swipe or scroll sideways to read more.</p>
+        </div>
+        <div class="quotes" tabindex="0" aria-label="Customer reviews">
+          <figure class="quote">
+            <div class="stars" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+            <p>I wore the Anarkali to my sister's mehndi and three aunties asked where it was from. The zari work is even better in person.</p>
+            <footer><span class="avatar">A</span><div><strong>Ayesha K.</strong><small>Lahore</small></div></footer>
+          </figure>
+          <figure class="quote">
+            <div class="stars" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+            <p>The sherwani was made to my measurements and it fit perfectly. I did not need a single alteration on my wedding day.</p>
+            <footer><span class="avatar">H</span><div><strong>Hamza R.</strong><small>Islamabad</small></div></footer>
+          </figure>
+          <figure class="quote">
+            <div class="stars" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+            <p>The chikankari kurta stays soft after many washes. Delivery took two days and the packaging was beautiful.</p>
+            <footer><span class="avatar">S</span><div><strong>Sana M.</strong><small>Karachi</small></div></footer>
+          </figure>
+          <figure class="quote">
+            <div class="stars" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+            <p>I exchanged a size and the team replied within an hour. It is rare to get service this good from a clothing brand.</p>
+            <footer><span class="avatar">B</span><div><strong>Bilal A.</strong><small>Bahawalpur</small></div></footer>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ GALLERY ============ -->
+    <section class="section alt">
+      <div class="container">
+        <div class="section-head">
+          <h2>Seen in the wild</h2>
+          <p>Tag <strong>@maisonzari</strong> to be featured in our lookbook.</p>
+        </div>
+        <div class="gallery">
+          <a href="#" class="g-tall" aria-label="Lookbook photo 1"><div class="media img-g1"></div></a>
+          <a href="#" class="g-wide" aria-label="Lookbook photo 2"><div class="media img-g2"></div></a>
+          <a href="#" aria-label="Lookbook photo 3"><div class="media img-g3"></div></a>
+          <a href="#" aria-label="Lookbook photo 4"><div class="media img-g4"></div></a>
+          <a href="#" aria-label="Lookbook photo 5"><div class="media img-g5"></div></a>
+          <a href="#" aria-label="Lookbook photo 6"><div class="media img-p6"></div></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ NEWSLETTER ============ -->
+    <section class="newsletter">
+      <div class="media img-news" aria-hidden="true"></div>
+      <div class="container">
+        <h2>Get 10% off your first order</h2>
+        <p>Join our list for early access to new collections. We send one email a month.</p>
+        <form class="news-form" action="#" method="post">
+          <input type="email" name="email" placeholder="Your email address" aria-label="Email address" required>
+          <button type="submit" class="btn btn-accent">Subscribe</button>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <a href="index.html" class="brand"><span class="brand-mark"></span>Maison Zari</a>
+        <p>Handwoven zari clothing for women and men, made by skilled artisans in Pakistan.</p>
+      </div>
+      <div>
+        <h4>Shop</h4>
+        <ul>
+          <li><a href="#collection">Women</a></li>
+          <li><a href="#collection">Men</a></li>
+          <li><a href="#collection">Festive</a></li>
+          <li><a href="#collection">Accessories</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Company</h4>
+        <ul>
+          <li><a href="about.html">Our story</a></li>
+          <li><a href="about.html">Our artisans</a></li>
+          <li><a href="contact.html">Contact us</a></li>
+          <li><a href="contact.html">FAQs</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Visit us</h4>
+        <ul>
+          <li>Model Town, Bahawalpur</li>
+          <li>Mon to Sat, 11am to 8pm</li>
+          <li><a href="mailto:hello@maisonzari.pk">hello@maisonzari.pk</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <span>&copy; 2026 Maison Zari. All rights reserved.</span>
+      <span>Made with care in Pakistan</span>
+    </div>
+  </footer>
+
+</body>
+</html>
