@@ -1,22 +1,27 @@
-const express = require("express")
+import express from "express";
+import path from "path";
+
 const app = express();
-const path = require("path")
 
+app.use(express.static(path.resolve("web")));
 
-app.use(express.static(path.join(__dirname, "web")));
-app.get("/",(req,res)=>{
-    res.sendFile(path.join(__dirname,"web","index.html"))
+app.get("/", (req, resp) => {
+  const absPath = path.resolve("web/index.html");
+  resp.sendFile(absPath);
+});
 
-})
-app.get("/about",(req,res)=>{
-    res.sendFile(path.join(__dirname,"web","about.html"))
+app.get("/about", (req, resp) => {
+  const absPath = path.resolve("web/about.html");
+  resp.sendFile(absPath);
+});
 
-})
-app.get("/contact",(req,res)=>{
-    res.sendFile(path.join(__dirname,"web","contact.html"))
+app.get("/contact", (req, resp) => {
+  const absPath = path.resolve("web/contact.html");
+  resp.sendFile(absPath);
+});
+app.use((req, resp) => {
+  const absPath = path.resolve("web/404.html");
+  resp.status(404).sendFile(absPath);
+});
 
-})
-
-
-
-app.listen(4400);
+app.listen(3200);
