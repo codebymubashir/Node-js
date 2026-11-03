@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Users Data</title>
+    <style>
+        table { border-collapse: collapse; width: 100%; }
+        th, td { border: 1px solid #ccc; padding: 8px 12px; text-align: left; }
+        th { background: #222; color: #fff; }
+        tr:nth-child(even) { background: #f5f5f5; }
+        .active { color: green; font-weight: bold; }
+        .inactive { color: red; font-weight: bold; }
+    </style>
+</head>
+<body>
+    <h1>All Users Data</h1>
+    <p>Total users: <%= users.length %></p>
+
+    <table>
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Age</th>
+                <th>City</th>
+                <th>Role</th>
+                <th>Status</th>
+                <th>Created At</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% users.forEach((user, index) => { %>
+                <tr>
+                    <td><%= index + 1 %></td>
+                    <td><a href="/users/<%= user._id %>"><%= user.name %></a></td>
+                    <td><%= user.email %></td>
+                    <td><%= user.age %></td>
+                    <td><%= user.city %></td>
+                    <td><%= user.role %></td>
+                    <td class="<%= user.isActive ? 'active' : 'inactive' %>">
+                        <%= user.isActive ? "Active" : "Inactive" %>
+                    </td>
+                    <td><%= user.createdAt %></td>
+                </tr>
+            <% }) %>
+        </tbody>
+    </table>
+
+    <br>
+    <a href="/users">Back to list</a>
+</body>
+</html>

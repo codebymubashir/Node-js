@@ -4,9 +4,17 @@ export function showUsers(req, res){
     res.render("users", {users: users})
 }
 
-export function showIndiviualUser(req, res){
-    console.log(req.params.name)
-    let userName = req.params.name
+export function showAllUsersData(req, res){
+    res.render("allUsers", {users: users})
+}
 
-    res.render("user", {user: userName})
+export function showIndiviualUser(req, res){
+    const id = req.params.id
+    const user = users.find(u => u._id === id)
+
+    if (!user) {
+        return res.status(404).send("User not found")
+    }
+
+    res.render("user", {user: user})
 }
