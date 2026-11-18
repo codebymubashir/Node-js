@@ -62,22 +62,16 @@ client.connect().then(() => {
     res.send("working");
   });
 
-  app.delete("/delete/:id", async (req, res) => {
+  app.get("/ui/delete/:id", async (req, res) => {
     const db = client.db(dbName);
     const collection = db.collection("users");
     const result = await collection.deleteOne({
       _id: new ObjectId(req.params.id),
     });
     if (result) {
-      res.send({
-        message: "data deleted",
-        success: true,
-      });
+      res.send("<h1>student data delete</h1>");
     } else {
-      res.send({
-        message: "data not deleted",
-        success: false,
-      });
+      res.send("<h1>student data delete</h1>");
     }
     res.send("working");
   });
