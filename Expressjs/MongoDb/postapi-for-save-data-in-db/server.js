@@ -75,6 +75,55 @@ client.connect().then(() => {
     }
     res.send("working");
   });
+
+
+
+  app.get("/ui/student/:id",async(req,res)=>{
+    const id = req.params.id
+    console.log(id)
+
+    const db = client.db(dbName);
+    const collection = db.collection("users");
+    const result = await collection.findOne({
+      _id: new ObjectId(req.params.id),
+    });
+
+    res.render('update-student',{result})
+  })
+
+
+
+  app.get("/student/:id",async(req,res)=>{
+    const id = req.params.id
+    console.log(id)
+
+    const db = client.db(dbName);
+    const collection = db.collection("users");
+    const result = await collection.findOne({ _id: new ObjectId(req.params.id),});
+    res.send({
+      message:"data fetched",
+      success:true,
+      result:result
+
+    })
+  })
+
+
+
+  app.post("/update/student/:id",(req,res)=>{
+
+    const db = client.db(dbName);
+    const collection = db.collection("users");
+    const filter={_id:new ObjectId(req.params.id)}
+    const update = {$set:req.body}
+    const result = collection.updateOne(filter,update)
+    
+    if (result) {
+    res.send('updated')
+    } else {
+    res.send('not updated')
+    }
+  })
 });
 
 app.listen(5500);
