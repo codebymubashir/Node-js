@@ -19,6 +19,8 @@
                 <th>Name</th>
                 <th>Email</th>
                 <th>Age</th>
+                <th>Update</th>
+                <th>Delete</th>
             </tr>
         </thead>
         <tbody>
@@ -27,6 +29,12 @@
                     <td><%= user.name %></td>
                     <td><%= user.email %></td>
                     <td><%= user.age %></td>
+                    <td><a href="/update/student/<%= user._id %>">Update</a></td>
+                    <td>
+  <form action="/delete/student/<%= user._id %>?_method=DELETE" method="POST">
+    <button type="submit" class="btn btn-sm btn-danger">Delete</button>
+  </form>
+</td>
                 </tr>
             <% }) %>    
         </tbody>
