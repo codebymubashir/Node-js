@@ -35,7 +35,7 @@ client.connect().then((connection) => {
       file: file ? `/uploads/${file.filename}` : null,
     });
 
-    // res.send("Form data entered!");
+  
     res.redirect("/form-data")
   } catch (err) {
     console.log(err);
